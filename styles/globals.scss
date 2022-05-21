@@ -1,0 +1,33 @@
+// base
+@import './base/reset.scss';
+@import './base/fonts.scss';
+// components
+@import './components/HeroBanner.scss';
+@import './components/Product.scss';
+@import './components/Category.scss';
+@import './components/NavBar.scss';
+@import './components/MainVideo.scss';
+@import './components/ColectionBanner.scss';
+@import './components/Lore.scss';
+@import './components/Values.scss';
+@import './components/Footer.scss';
+@import './components/CategoryBanner.scss';
+@import './components/ProductDetails.scss';
+@import './components/Cart.scss';
+
+html,
+body {
+  font-family: 'Gotham';
+  overflow: visible;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.main-container {
+  margin-top: 52px;
+}
+
+.layout {
+  position: relative;
+}

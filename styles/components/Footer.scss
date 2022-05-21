@@ -1,0 +1,129 @@
+.footer {
+  background: #131313;
+  padding: 65px 85px;
+  @media screen and (max-width: 1400px) {
+    padding: 75px 20px 30px;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__column {
+    margin-right: 20px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    &:last-child {
+      margin-right: 0;
+      @media screen and (max-width: 767px) {
+        order: -1;
+      }
+    }
+    @media screen and (max-width: 567px) {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+
+  &__form {
+    display: flex;
+    width: 464px;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  &__input {
+    border: 1px solid #FFFFFF;
+    width: 100%;
+    padding: 13px 0 13px 16px;
+    background: none;
+    margin-right: 10px;
+    color: #F7F7F7;
+    @media screen and (max-width: 567px) {
+      margin-right: 3px;
+    }
+  }
+
+  &__button {
+    border: 2px solid #F7F7F7;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    cursor: pointer;
+    padding: 9px 25px;    
+    color: #FFFFFF;
+    @media screen and (max-width: 567px) {
+      font-size: 14px;
+      padding: 9px;
+    }
+  }
+
+  .copyright {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__title {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      @media screen and (max-width: 420px) {
+        max-width: 240px;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (max-width: 567px) {
+        display: none;
+      }
+    }
+    &__description {
+      margin-left: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #777777;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__icons {
+    @media screen and (max-width: 951px) {
+     justify-content: start;   
+     margin-top: 50px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 50px;
+      justify-content: start;
+    }
+    @media screen and (max-width: 567px) {
+      margin-top: 20px;
+      margin-bottom: 55px;
+    }
+    margin-top: 120px;
+    display: flex;
+    justify-content: end;
+    .icon {
+      margin-left: 24px;
+      cursor: pointer;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.category-banner {
+
+  &__image {
+    position: relative;
+    top: 0;   
+    left: 0;
+    pointer-events: none;
+    height: 386px;
+    width: 100%;
+    
+    @media (max-width: 1024px) {
+      height: 312px;
+    }
+
+    @media (max-width: 720px) {
+      height: 216px;
+    }
+    
+    img {
+      position: absolute;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

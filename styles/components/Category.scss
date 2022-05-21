@@ -1,0 +1,115 @@
+.category {
+  &__wrapper {
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__container {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 335px);
+    grid-auto-rows: 335px;
+    justify-content: center;
+    grid-gap: 20px;
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, minmax(137px, 335px));
+    }
+    @media screen and (max-width: 567px) {
+      grid-auto-rows: 200px;
+    }
+    @media screen and (max-width: 370px) {
+      grid-row: repeat(auto-fill, auto-fit);
+      grid-auto-rows: 137px;
+    }
+  }
+  
+  &__card {
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    background: #F2F2F2;
+    display: flex;
+  }
+
+  &__image {
+    position: absolute;
+    display: flex;
+    width: 170px;
+    max-height: 240px;
+    pointer-events: none;
+    margin-left: 80px;
+    bottom: 100px;
+    justify-content: center;
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 150px;
+    }
+    @media screen and (max-width: 567px) {
+      margin-top: 35px;
+      padding: 0 0 0 20px;
+      margin-left: 0;
+      bottom: 30px;
+    }
+    @media screen and (max-width: 370px) {
+      margin-left: 15px;
+      width: 85px;
+      bottom: 40px;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #000000;
+    justify-content: center;
+    align-items: end;
+    display: flex;
+    margin-bottom: 28px;
+    @media screen and (max-width: 567px) {
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__description {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 36px 0 26px;
+    @media screen and (max-width: 567px) {
+      margin-top: 35px;
+      padding: 0 0 0 20px;
+    }
+    h5 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: #000000;
+      @media screen and (max-width: 567px) {
+        font-size: 22px;
+        line-height: 26px;      
+      }
+    }
+    p {
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000000;
+      align-self: end;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}

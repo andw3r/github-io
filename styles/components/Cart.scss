@@ -1,0 +1,266 @@
+.cart {
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow: auto;
+  padding: 40px;
+  height: 100%;
+  width: 600px;
+  background: #F4F4F4;
+  z-index: 12;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  &__wrapper {
+
+  }
+  
+  // outer
+  &__outer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__total {
+    margin-bottom: 50px;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 30px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #D6D6D6;
+      top: 0;
+    }
+  }
+
+  &__total-price {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__buttons-checkout {
+    display: flex;
+    flex-direction: column;
+    button {
+      font-family: 'Gotham';
+      font-weight: 500;
+      width: 100%;
+      font-size: 15px;
+      padding: 20px 0;
+      border-radius: 4px;
+      &:first-child {
+        color: #fff;
+        background: #1E1E1E;
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        border: 1px solid #1B1B1B;
+      }
+    }
+  }
+
+  &__btn-checkout {
+
+  }
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    margin: 50px 0 30px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+
+    @media screen and (max-width: 610px) {
+      margin: 0 0 30px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      background: #D6D6D6;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__close-button {
+    position: relative;
+    height: 40px;
+    width: 50px;
+    cursor: pointer;
+    &::before {
+      top: 5px;
+      position: absolute;
+      content: '';
+      background: #000;
+      height: 27px;
+      width: 4px;
+      transform: rotateZ(45deg);
+    }
+    &::after {
+      top: 5px;
+      position: absolute;
+      content: '';
+      background: #000;
+      height: 27px;
+      width: 4px;
+      transform: rotateZ(-45deg);
+    }
+  }
+}
+
+.cart__overflow {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 12;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+
+// if there are no products | empty cart
+.empty-cart {
+  &__title {
+    font-size: 26px;
+  }
+}
+
+.product-container {
+  margin-top: 40px;
+  height: 400px;
+  overflow-x: auto;
+  @media screen and (max-width: 610px) {
+    margin-top: 20px;
+  }
+}
+
+// cart-product
+.cart-product {
+  width: 100%;
+  display: flex;
+  position: relative;
+  @media screen and (max-width: 510px) {
+    margin-bottom: 70px;
+  }
+  &__image {
+    img {
+      width: 260px;
+      @media screen and (max-width: 610px) {
+        width: 240px;
+      }
+      @media screen and (max-width: 510px) {
+        width: 100%;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and (max-width: 510px) {
+      flex-direction: column;
+    }
+  }
+  &__description {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    @media screen and (max-width: 610px) {
+      font-size: 18px;
+    }
+  }
+
+  &__model {
+
+  }
+
+}
+
+.quantity {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 510px) {
+    margin-top: 10px;
+  }
+  &__buttons {
+    display: flex;
+  }
+  
+  &__btn {
+    user-select: none;    
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 32px;
+    border: 2px solid #e2e2e2;
+    @media screen and (max-width: 610px) {
+      height: 34px;
+    }
+  }
+  &__btn--num {
+    border-left: none;
+    border-right: none;
+    width: 54px;
+    cursor: default;
+    @media screen and (max-width: 610px) {
+      width: 42px;
+    }
+  }
+  
+  &__btn--remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+}
+
